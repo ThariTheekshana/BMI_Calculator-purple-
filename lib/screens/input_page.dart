@@ -102,7 +102,7 @@ class _InputPageState extends State<InputPage> {
                         data: SliderTheme.of(context).copyWith(
                           thumbShape: const RoundSliderThumbShape(
                               enabledThumbRadius: 15.0),
-                          thumbColor: const Color(0xFFEB1555),
+                          thumbColor: Colors.lightBlue,
                           activeTrackColor: Colors.white,
                           inactiveTrackColor: const Color(0xFF8D8E98),
                           overlayColor: const Color(0x29EB1555),
@@ -216,11 +216,12 @@ class _InputPageState extends State<InputPage> {
 
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ResultPage(
-                    bmiResult: calc.calculateBMI(),
-                    resultText: calc.getResult(),
-                    interpretation: calc.getInterpretation(),
-                  )),
+                  MaterialPageRoute(
+                      builder: (context) => ResultPage(
+                            bmiResult: calc.calculateBMI(),
+                            resultText: calc.getResult(),
+                            interpretation: calc.getInterpretation(),
+                          )),
                 );
               },
               buttonTitle: 'CALCULATE',
